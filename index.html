@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spinning Donut</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      font-size: 12px;
+      white-space: pre;
+    }
+    #donut {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="donut"></div>
+
+  <script>
+    let A = 1, B = 1;
+    let interval = setInterval(() => {
+      let b = [];
+      let z = [];
+      let output = [];
+
+      const width = 40;
+      const height = 24;
+
+      for (let k = 0; k < width * height; k++) {
+        b[k] = ' ';
+        z[k] = 0;
+      }
+
+      for (let j = 0; j < 6.28; j += 0.07) {
+        for (let i = 0; i < 6.28; i += 0.02) {
+          let c = Math.sin(i),
+              d = Math.cos(j),
+              e = Math.sin(A),
+              f = Math.sin(j),
+              g = Math.cos(A),
+              h = d + 2,
+              D = 1 / (c * h * e + f * g + 5),
+              l = Math.cos(i),
+              m = Math.cos(B),
+              n = Math.sin(B),
+              t = c * h * g - f * e;
+          let x = Math.floor(width / 2 + width * 0.5 * D * (l * h * m - t * n)),
+              y = Math.floor(height / 2 + height * 0.5 * D * (l * h * n + t * m)),
+              o = Math.floor(8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n));
+          if (height * x + y < width * height && y >= 0 && x >= 0 && o > 0) {
+            const chars = ".,-~:;=!*#$@";
+            b[width * y + x] = chars[o > 0 ? o : 0];
+          }
+        }
+      }
+
+      let txt = '';
+      for (let k = 0; k < b.length; k++) {
+        txt += b[k];
+        if (k % width === width - 1) txt += '\n';
+      }
+
+      document.getElementById('donut').innerText = txt;
+
+      A += 0.04;
+      B += 0.02;
+    }, 50);
+  </script>
+</body>
+</html>
