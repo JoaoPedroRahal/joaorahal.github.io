@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Semester Score</title>
+<title>Semester Score — TCC</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <style>
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   background-color: #000;
-  color: #fff;
+  color: #333;
 }
 header, footer {
   background-color: #39a6ff;
@@ -22,20 +22,25 @@ section {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
+  text-align: center;
 }
 
-.right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.hero h1 {
+  font-size: 2.5rem;
 }
-
-.left {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero p {
+  font-size: 1.2rem;
+}
+.btn {
+  background-color: #380079;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.btn:hover {
+  background-color: #4f00a1;
 }
 
 .hero {
@@ -85,35 +90,21 @@ section {
   border-radius: 8px;
 }
 
-.btn {
-  background-color: #380079;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-}
 </style>
 </head>
 <body>
 
-
 <header>
-  <h1>Welcome to Semester End</h1>
-  <p>Here you can find my track choice and some amusing things I found.</p>
+  <h1>Semester Score</h1>
 </header>
 
 <section class="hero">
   <div class="hero-content">
     <div class="hero-text">
-        <h2>Who Am I?</h2>
-        <p>João Pedro, CS student and cast iron pans lover.</p>
-        <p>Trying my best to know what to do next, probably switching to a Chem Eng major next year, but not planning to stop coding.</p>
-        <p>Did you know teflon is deadly to birds?</p>
-        <h2>Chosen Track?</h2>
-        <p>Software Systems. Had the most fun watching Kon, Kelly and Meirelles lectures, and despite some would imagine, I am not dying for the 9 different optimization courses.</p>
+        <h1>Stay tuned for my monograph</h1>
+        <p>I still plan on posting it here.</p>
         <a href="donut.html" class="btn">Donut</a>
-        <a href="tcc.html" class="btn">TCC</a>
+        <a href="index.html" class="btn">Index</a>
     </div>
     <div class="hero-image">
       <img src="a111be72b2c0cb825ee6c0efc4db0cba.gif" alt="Animated banner" style="width:100%; object-fit:cover;">
@@ -121,8 +112,9 @@ section {
   </div>
 </section>
 
+
 <footer>
-  <p></p>
+  <p>© Semester Score. All rights reserved. Actually, not planning on copyrighting anything, steal it if you want.</p>
 </footer>
 
 </body>
